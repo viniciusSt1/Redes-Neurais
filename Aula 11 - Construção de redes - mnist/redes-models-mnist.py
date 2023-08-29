@@ -34,8 +34,8 @@ def CNN(width, height, channels, classes):
     model.add(MaxPooling2D((2,2)))
     model.add(Flatten())    #Passagem para as densas
 
-    model.add(Dense(128, input_shape=(inputShape,), activation='relu'))
-    model.add(Dense(64, input_shape=(inputShape,), activation='relu'))
+    model.add(Dense(128, activation='relu'))
+    model.add(Dense(64, activation='relu'))
     #model.add(Dropout(taxa))
     model.add(Dense(classes, activation='softmax'))
 
